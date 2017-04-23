@@ -3,7 +3,9 @@
 
 Implements the method used [here](http://arxiv.org/abs/1607.03055):
 ```
-Exploring the Political Agenda of the European Parliament Using a Dynamic Topic Modeling Approach Derek Greene, James P. Cross. Political Analysis, 2016.
+Exploring the Political Agenda of the European Parliament Using a 
+Dynamic Topic Modeling Approach Derek Greene, James P. Cross. 
+Political Analysis, 2016.
 ```
 
 ### Data

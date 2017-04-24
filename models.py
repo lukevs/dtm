@@ -1,11 +1,17 @@
 """module for models"""
 
+import logging
+
+import dill
 import numpy as np
 from glove import Corpus, Glove
 from scipy import spatial
 from sklearn.decomposition import NMF
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import normalize
+
+
+logger = logging.getLogger(__name__)
 
 
 class Topic:
@@ -44,7 +50,7 @@ class Topic:
         return [self.vocab[i] for i in top_index]
 
 
-def print_topics(topics):
+def print_topics(dtm, topics):
     """prints the given topics
 
     :param topics: topics to print
@@ -53,7 +59,7 @@ def print_topics(topics):
 
     for i, t in enumerate(topics):
         print('Topic {}\n'.format(i + 1))
-        for word in t.top_words(20):
+        for word in t.top_terms(20):
             print(word)
 
         print('\n')
@@ -75,8 +81,6 @@ class DTM:
         :type vocab: dict from int to str
         """
 
-        self.logger = logging.get_logger(__name__)
-
         self.glove = glove
 
         self.index_to_word = vocab
@@ -86,6 +90,27 @@ class DTM:
 
         self.window_topics = []
         self.dynamic_topics = []
+
+    @classmethod
+    def load(cls, path):
+        """loads the model from disk
+
+        :param path: path to model
+        :type path: str
+        """
+
+        with open(path, 'rb') as f:
+            return dill.load(f)
+
+    def save(self, path):
+        """saves the model to disk
+
+        :param path: path to model
+        :type path: str
+        """
+
+        with open(path, 'wb') as f:
+            dill.dump(self, f)
 
     def fit(self, windows):
         """fits the model for the given windows
@@ -129,10 +154,10 @@ class DTM:
     def _fit_window_topics(self):
         """fits the window topics"""
 
-        self.logger.info('Fitting window topics')
+        logger.info('Fitting window topics')
         window_topics = []
         for i, window in enumerate(self.windows):
-            self.logger.info('Fitting topic {} of {}'.format(i, len(self.windows))
+            logger.info('Fitting topics for window ({}/{})'.format(i+1, len(self.windows)))
             window_topics.append(self._choose_topics(window, self.index_to_word))
 
         self.window_topics = window_topics
@@ -144,7 +169,7 @@ class DTM:
         :type n_top: int
         """
 
-        self.logger.info('Fitting dynamic topics')
+        logger.info('Fitting dynamic topics')
         rows = []
         for topics in self.window_topics:
             for topic in topics:

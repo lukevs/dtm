@@ -12,6 +12,9 @@ from tokens import Tokenizer
 from utils import setup_logging, read_data
 
 
+MODEL_PATH = 'model.dill'
+
+
 def parse_path():
     """parses the path from input arguments
 
@@ -77,6 +80,7 @@ def main():
     logger.info('Fitting topics')
     dtm = DTM(glove, tfidf.get_feature_names())
     dtm.fit(window_vectors)
+    dtm.save(MODEL_PATH)
 
     logger.info('Done')
 

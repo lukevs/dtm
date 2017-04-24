@@ -3,10 +3,28 @@
 
 Implements the method used [here](http://arxiv.org/abs/1607.03055):
 ```
-Exploring the Political Agenda of the European Parliament Using a 
+Exploring the Political Agenda of the European Parliament Using a
 Dynamic Topic Modeling Approach Derek Greene, James P. Cross. 
 Political Analysis, 2016.
 ```
+
+### Installation
+
+Install pip requirements with:
+```
+pip install -r requirements.txt
+```
+
+spacy requests downloading the English model with:
+```
+python3 -m spacy download en
+```
+
+Run with:
+```
+pytnon3 dtm.py <path to data>
+```
+
 
 ### Data
 

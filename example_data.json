@@ -1,0 +1,15 @@
+{
+  "documents": [
+    {
+      "text": "hi",
+      "timestamp": 100
+    }
+  ],
+  "windows": [
+    {
+      "label": "First window",
+      "start": 0,
+      "end": 1000
+    }
+  ]
+}

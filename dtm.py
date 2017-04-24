@@ -1,4 +1,4 @@
-"""file for running the model"""
+"""Dynamic Topic Modeling using Non-negative Matrix Factorization"""
 
 import argparse
 import json

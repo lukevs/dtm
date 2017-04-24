@@ -5,8 +5,9 @@ import logging
 
 import numpy as np
 import pandas as pd
+import scipy
 
-from models import train_glove, train_tfidf
+from models import train_glove, train_tfidf, DTM
 from tokens import Tokenizer
 from utils import setup_logging, read_data
 
@@ -51,15 +52,18 @@ def main():
     logger.info('Tokenizing')
     tokenizer = Tokenizer()
     tokenized = tokenizer.tokenize(documents['text'])
-    documents['tokenized'] = tokenized
 
     logger.info('Fitting TF-IDF')
     tokenized_documents = [' '.join(tokens) for tokens in tokenized]
     tfidf = train_tfidf(tokenized_documents)
-    documents['vectorized'] = tfidf.transform(tokenized_documents)
+    vectorized = tfidf.transform(tokenized_documents)
+
+    del tokenized_documents
 
     logger.info('Training GloVe')
     glove = train_glove(tokenized)
+
+    del tokenized
 
     logger.info('Separating by windows')
     window_vectors = []
@@ -68,10 +72,11 @@ def main():
             documents['timestamp'] >= window['start'],
             documents['timestamp'] < window['end'])
 
-        window_vectors.append(documents[window_slice]['vectorized'])
+        window_vectors.append(vectorized[np.where(window_slice)])
 
     logger.info('Fitting topics')
-    # TODO
+    dtm = DTM(glove, tfidf.get_feature_names())
+    dtm.fit(window_vectors)
 
     logger.info('Done')
 

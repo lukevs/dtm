@@ -1,15 +1,132 @@
 {
-  "documents": [
-    {
-      "text": "hi",
-      "timestamp": 100
-    }
-  ],
-  "windows": [
-    {
-      "label": "First window",
-      "start": 0,
-      "end": 1000
-    }
-  ]
+    "documents": [
+        {
+            "text": "Distillery keytar edison bulb semiotics, trust fund actually chartreuse",
+            "timestamp": 0
+        },
+        {
+            "text": " Paleo williamsburg typewriter cornhole artisan",
+            "timestamp": 1
+        },
+        {
+            "text": " Echo park typewriter chicharrones occupy, copper mug gluten-free pickled banjo +1 listicle asymmetrical art party lo-fi cronut",
+            "timestamp": 2
+        },
+        {
+            "text": " Retro gentrify affogato, bicycle rights everyday carry pok pok DIY banh mi pour-over",
+            "timestamp": 3
+        },
+        {
+            "text": " Beard post-ironic la croix, woke pug +1 gochujang freegan cred banjo disrupt four dollar toast stumptown",
+            "timestamp": 4
+        },
+        {
+            "text": " Echo park intelligentsia air plant asymmetrical cold-pressed fanny pack brooklyn, chambray green juice semiotics vexillologist pug",
+            "timestamp": 5
+        },
+        {
+            "text": " Tilde bicycle rights pork belly ugh, subway tile chambray everyday carry hella bespoke synth sartorial mixtape knausgaard hell of before they sold out",
+            "timestamp": 6
+        },
+        {
+            "text": "  Heirloom fixie artisan succulents, cronut mustache dreamcatcher four loko tbh unicorn fingerstache kale chips locavore kombucha literally",
+            "timestamp": 7
+        },
+        {
+            "text": " Whatever aesthetic retro blog mlkshk microdosing vinyl swag chambray, pinterest meditation banh mi quinoa pabst",
+            "timestamp": 8
+        },
+        {
+            "text": " Blog skateboard butcher semiotics",
+            "timestamp": 9
+        },
+        {
+            "text": " 8-bit normcore narwhal, meditation fap tumeric etsy roof party flannel austin offal tacos cornhole butcher",
+            "timestamp": 10
+        },
+        {
+            "text": " Asymmetrical thundercats try-hard keffiyeh jianbing tousled",
+            "timestamp": 11
+        },
+        {
+            "text": " Activated charcoal tbh salvia asymmetrical echo park, ethical gochujang man bun edison bulb tacos ennui cornhole banjo",
+            "timestamp": 12
+        },
+        {
+            "text": " Brooklyn XOXO tote bag trust fund chia activated charcoal, offal humblebrag beard chartreuse venmo pabst drinking vinegar",
+            "timestamp": 13
+        },
+        {
+            "text": "  Chartreuse keffiyeh craft beer, whatever VHS knausgaard literally tbh pitchfork humblebrag 8-bit street art quinoa",
+            "timestamp": 14
+        },
+        {
+            "text": " Letterpress swag selfies pork belly biodiesel cred chillwave church-key, aesthetic narwhal tousled whatever ennui",
+            "timestamp": 15
+        },
+        {
+            "text": " Jean shorts four loko bespoke, waistcoat cold-pressed vinyl woke flannel normcore before they sold out you probably haven't heard of them fam cred edison bulb activated charcoal",
+            "timestamp": 16
+        },
+        {
+            "text": " PBR&B pinterest semiotics, williamsburg activated charcoal edison bulb pour-over YOLO glossier viral pok pok cornhole bitters",
+            "timestamp": 17
+        },
+        {
+            "text": " Cred seitan beard bicycle rights meggings irony, hella iceland plaid pour-over",
+            "timestamp": 18
+        },
+        {
+            "text": " Kinfolk food truck whatever meggings vexillologist, art party vaporware vice roof party wolf schlitz",
+            "timestamp": 19
+        },
+        {
+            "text": " Taxidermy keytar selfies, ennui pug iceland tbh narwhal forage art party cliche",
+            "timestamp": 20
+        },
+        {
+            "text": "  Everyday carry ennui green juice cray, normcore listicle blog pour-over migas hashtag thundercats letterpress poutine wayfarers",
+            "timestamp": 21
+        },
+        {
+            "text": " Art party quinoa whatever ugh af vexillologist",
+            "timestamp": 22
+        },
+        {
+            "text": " Franzen waistcoat neutra poutine keytar pabst, bushwick street art",
+            "timestamp": 23
+        },
+        {
+            "text": " Thundercats af single-origin coffee taxidermy, pork belly fashion axe viral authentic",
+            "timestamp": 24
+        },
+        {
+            "text": " Yuccie fam unicorn, tote bag kickstarter franzen tacos bicycle rights banh mi YOLO pickled ramps blog polaroid",
+            "timestamp": 25
+        },
+        {
+            "text": " Deep v messenger bag try-hard listicle skateboard squid",
+            "timestamp": 26
+        },
+        {
+            "text": " Cardigan tousled copper mug, iPhone live-edge ugh yuccie lumbersexual chillwave squid jianbing lyft portland",
+            "timestamp": 27
+        },
+        {
+            "text": "",
+            "timestamp": 28
+        }
+    ],
+    "windows": [
+        {
+            "end": 15,
+            "label": "First",
+            "start": 0
+        },
+        {
+            "end": 30,
+            "label": "Second",
+            "start": 15
+        }
+    ]
 }

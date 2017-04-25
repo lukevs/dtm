@@ -42,13 +42,10 @@ def parse_args():
     return parser.parse_args()
 
 
-def main():
-    setup_logging()
-    logger = logging.getLogger(__name__)
+def fit(data):
+    """fits the model for the given data"""
 
-    logger.info('Loading data')
-    path = parse_path()
-    data = read_data(path)
+    logger = logging.getLogger(__name__)
     documents = pd.DataFrame(data['documents'])
     windows = data['windows']
 
@@ -80,8 +77,19 @@ def main():
     logger.info('Fitting topics')
     dtm = DTM(glove, tfidf.get_feature_names())
     dtm.fit(window_vectors)
-    dtm.save(MODEL_PATH)
 
+    return dtm, tokenizer, tfidf
+
+
+def main():
+    setup_logging()
+    logger = logging.getLogger(__name__)
+
+    logger.info('Loading data')
+    path = parse_path()
+    data = read_data(path)
+    dtm, _, _ = fit(data)
+    dtm.save(MODEL_PATH)
     logger.info('Done')
 
 

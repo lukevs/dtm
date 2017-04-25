@@ -50,7 +50,7 @@ class Topic:
         return [self.vocab[i] for i in top_index]
 
 
-def print_topics(dtm, topics):
+def print_topics(topics):
     """prints the given topics
 
     :param topics: topics to print

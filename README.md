@@ -4,7 +4,7 @@
 Implements the method used [here](http://arxiv.org/abs/1607.03055):
 ```
 Exploring the Political Agenda of the European Parliament Using a
-Dynamic Topic Modeling Approach Derek Greene, James P. Cross. 
+Dynamic Topic Modeling Approach Derek Greene, James P. Cross.
 Political Analysis, 2016.
 ```
 
@@ -23,6 +23,12 @@ python3 -m spacy download en
 Run with:
 ```
 pytnon3 dtm.py <path to data>
+```
+
+This repo contains an example ipython notebook. To view, start a jupyter server
+in this directory using:
+```
+jupyter notebook
 ```
 
 

@@ -22,7 +22,7 @@ python3 -m spacy download en
 
 Run with:
 ```
-pytnon3 dtm.py <path to data>
+pytnon3 dtm.py <path to JSON file with object specified below>
 ```
 
 This repo contains an example ipython notebook. To view, start a jupyter server
